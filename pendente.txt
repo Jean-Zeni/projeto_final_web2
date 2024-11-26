@@ -1,0 +1,6 @@
+Ainda terei que fazer:
+
+1- os cards de notícia serem funcionais; (como farei isso?) 
+2- estilizar o projeto;
+3- fazer o repositório no github;
+4- fazer o lobby funcionar
