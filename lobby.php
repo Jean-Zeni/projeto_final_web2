@@ -45,10 +45,19 @@ $dados = $usuario->ler();
 <body>
     
 <header>
-    <h1>HOME</h1>
+    <h1>MENU</h1>
 </header>
 
 <h1><?php echo saudacao() . ", " . $nome_usuario . " o que deseja?"; ?></h1>
+
+<main>
+    <button onclick="location.href='cadastrarNoticias.php'"> Cadastrar Nova Noticia </button>
+    <button onclick="location.href='cadastrarUsuario.php'"> Cadastrar Novo Usuario </button>
+    <button onclick="location.href='gerenciarNoticias.php'"> Gerenciar Noticias </button>
+    <button onclick="location.href='portalUsuarios.php'"> Gerenciar Usuarios </button>
+    <button onclick="location.href='index.php'"> Voltar </button>
+    
+</main>
 
 </body>
 </html>

@@ -2,6 +2,7 @@
 session_start();
 include_once './config/config.php';
 include_once './classes/Usuario.php';
+include_once './classes/Noticia.php';
 
 
 // Verificar se o usuário está logado
@@ -9,21 +10,30 @@ if (!isset($_SESSION['usuario_id'])) {
     header('Location: index.php');
     exit();
 }
+
+// INSTANCIAÇÃO DE OBJ
+$notiDb = new Noticia($db);
 $usuario = new Usuario($db);
 
 
-// Processar exclusão de usuário
-if (isset($_GET['deletar'])) {
-    $id = $_GET['deletar'];
-    $usuario->deletar($id);
-    header('Location: portalUsuarios.php');
+
+// Obter dados das notícias
+$dadosNoticias = $notiDb->ler();
+$usuarioDb = $usuario->ler();
+
+
+// Processar exclusão de noticia
+if (isset($_GET['deletarNoti'])) {
+    $idNoti = $_GET['deletarNoti'];
+    $notiDb->deletarNoti($idNoti);
+    header('Location: gerenciarNoticias.php');
     exit();
 }
 // Obter dados do usuário logado
 $dados_usuario = $usuario->lerPorId($_SESSION['usuario_id']);
 $nome_usuario = $dados_usuario['nome'];
-// Obter dados dos usuários
-$dados = $usuario->ler();
+
+
 // Função para determinar a saudação
 function saudacao()
 {
@@ -53,22 +63,23 @@ function saudacao()
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Sexo</th>
-            <th>Fone</th>
-            <th>Email</th>
-            <th>Ações</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Data da Notícia</th>
+            <th>Conteúdo</th>
+            <th>Imagem</th>
         </tr>
-        <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)) : ?>
+        <?php while ($row = $dadosNoticias->fetch(PDO::FETCH_ASSOC)) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['pk_id_noticia']; ?></td>
+                <td><?php echo $row['titulo_noticia']; ?></td>
                 <td><?php echo $row['nome']; ?></td>
-                <td><?php echo ($row['sexo'] === 'M') ? 'Masculino' : 'Feminino'; ?></td>
-                <td><?php echo $row['fone']; ?></td>
-                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['data_noticia']; ?></td>
+                <td><?php echo $row['noticia']; ?></td>
+                <td><?php echo $row['foto']; ?></td>
                 <td>
-                    <a href="editar.php?id=<?php echo $row['id']; ?>">Editar</a>
-                    <a href="deletar.php?id=<?php echo $row['id']; ?>">Deletar</a>
+                    <a href="editarNoti.php?id=<?php echo $row['pk_id_noticia']; ?>">Editar</a>
+                    <a href="deletarNoti.php?id=<?php echo $row['pk_id_noticia']; ?>">Deletar</a>
                 </td>
             </tr>
         <?php endwhile; ?>

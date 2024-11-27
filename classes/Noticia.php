@@ -52,11 +52,11 @@ class Noticia
     }
 
 
-    public function deletar($pkIdNoticia)
+    public function deletarNoti($idNoti)
     {
         $query = "DELETE FROM " . $this->table_name . " WHERE pk_id_noticia = ?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$pkIdNoticia]);
+        $stmt->execute([$idNoti]);
         return $stmt;
     }
 }
