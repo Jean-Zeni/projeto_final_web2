@@ -21,14 +21,14 @@ $dadosUsuario = $usuarioBanco->ler();
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="indexProjeto">
     
     <header>
-        <h1>Portal de Notícias</h1>
+        <h1 id="title">Portal de Notícias</h1>
 
-        <a href="./login.php">Login</a>
+        <button id="btnLogin" onclick="location.href='./login.php'">Login</button>
 
-        <img src="" alt="a">
+        <img id="imgProjeto" src="./imgsProjeto/treenoticias.png" alt="logo">
     </header>
 
     <main>
@@ -43,13 +43,11 @@ $dadosUsuario = $usuarioBanco->ler();
             <img id="imgNoticia" src="<?php echo $row['foto']?>" alt="Imagem da notícia"> 
 
             <!-- TITLE NOTICIA -->
-            <p id="titleNoticia"><?php echo $row['titulo_noticia']?></p>
+            <p id="conteudoCard"><?php echo $row['titulo_noticia'] . "<br><br>";
 
-            <!-- NOTICIA -->
-            <p><?php echo $row['noticia']?></p>
+            echo $row['noticia'] . "<br><br>";
 
-            <!-- AUTOR DA NOTICIA -->
-             <p id="autorNoticia"><?php echo $row['nome']?></p>
+            echo "Autor: <strong>" . $row['nome'] . "</strong>"?></p>
         </div>
 
         <?php endwhile; ?>

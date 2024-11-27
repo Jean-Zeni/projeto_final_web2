@@ -23,43 +23,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 <!DOCTYPE html>
-<html>
-
-
+<html lang="pt-br">
 <head>
-    <title>A U T E N T I C A Ç Ã O</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body id="telaLogin">
+
+<div class="container">
 
 
-<body>
+<div class="box">
+    <h1>Login</h1>
 
 
-    <div class="container">
+    <form method="POST">
+        <label for="email">Email:</label><br>
+        <input class="campoTexto" type="email" name="email" required>
+        <br><br>
+        <label for="senha">Senha:</label><br>
+        <input class="campoTexto" type="password" name="senha" required>
+        <br><br>
+        <input id="btnLogin" type="submit" name="login" value="Login">
+    </form>
+    <!-- <p>Não tem uma conta? <a href="./cadastrarUsuario.php">Registre-se aqui</a></p>
+    <div class="mensagem">
+        php if (isset($mensagem_erro)) echo '<p>' . $mensagem_erro . '</p>';
+    </div> -->
+</div>
 
-
-        <div class="box">
-            <h1>A U T E N T I C A Ç Ã O</h1>
-
-
-            <form method="POST">
-                <label for="email">Email:</label>
-                <input type="email" name="email" required>
-                <br><br>
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" required>
-                <br><br>
-                <input type="submit" name="login" value="Login">
-            </form>
-            <!-- <p>Não tem uma conta? <a href="./cadastrarUsuario.php">Registre-se aqui</a></p>
-            <div class="mensagem">
-                php if (isset($mensagem_erro)) echo '<p>' . $mensagem_erro . '</p>';
-            </div> -->
-        </div>
-
-
+    
 </body>
-
-
 </html>

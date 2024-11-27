@@ -1,8 +1,181 @@
-@media(min-width: 601px){
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans&display=swap');
 
-#imgNoticia{
-    width: 200px;
-}
+@media(min-width: 601px) {
 
+    /* ESTILIZAÇÃO DO INDEX.PHP */
+    /* ================================================================================================================ */
+    #indexProjeto {
 
+        #imgProjeto {
+            width: 230px;
+        }
+
+        margin: 0;
+
+        /* FONTE */
+        font-family: "Parkinsans",
+        sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        header {
+            /* CORES */
+            background-color: rgb(255, 240, 216);
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+
+            /* POSIÇÃO E TAMANHOS */
+            position: fixed;
+            display: flex;
+            width: 100%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+
+            /* FORMATO */
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            /* TEXTO */
+            #title {
+                align-self: center;
+                transform: translate(110px);
+            }
+
+            #btnLogin {
+                transform: translate(500px);
+                font-size: 20px;
+                border-radius: 10px;
+                padding: 5px;
+                border-width: 0.5px;
+
+                /* CORES */
+                background-color: rgb(20, 182, 20);
+                color: white;
+            }
+
+            #btnLogin:hover {
+                background-color: black;
+                transition: background-color 0.15s ease-in-out;
+                cursor: pointer;
+            }
+
+        }
+
+        main {
+            padding-top: 120px;
+            justify-content: center;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #cardNoticia {
+            position: relative;
+            display: flex;
+            gap: 10px;
+            background-color: rgb(224, 224, 224);
+            margin-left: 20px;
+            width: 1200px;
+
+            #conteudoCard {
+                right: 300px;
+            }
+
+        }
+
+        #imgNoticia {
+            min-width: 200px;
+            min-height: 200px;
+            max-width: 250px;
+            max-height: 250px;
+
+            padding: 20px;
+        }
+
+    }
+
+    /* FIM DA ESTILIZAÇÃO DO INDEX.PHP */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DA TELA DE LOGIN */
+    /* ================================================================================================================ */
+
+    #telaLogin {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-family: "Parkinsans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        background-color: rgb(219, 213, 130);
+
+        .box {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50px;
+            margin-top: 100px;
+            background-color: rgb(20, 182, 20);
+            width: 300px;
+
+            #btnLogin{
+                font-size: 20px;
+                border-radius: 50px;
+                border-width: 0.5px;
+            }
+
+            #btnLogin:hover{
+                background-color: blue;
+                color: white;
+                transition: background-color 0.15s ease-in-out;
+                cursor: pointer;
+            }
+
+            .campoTexto{
+                font-size: 15px;
+                border-radius: 40px;
+                border-width: 0.5px;
+                text-align: center;
+            }
+        }
+    }
+    /* FIM DA ESTILIZAÇÃO DA TELA DE LOGIN */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DO MENU LOBBY */
+    /* ================================================================================================================ */
+
+    #lobby{
+        font-family: "Parkinsans",
+        sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            button{
+                
+            }
+        }
+    }
 }

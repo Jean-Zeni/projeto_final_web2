@@ -42,7 +42,7 @@ $dados = $usuario->ler();
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="lobby">
     
 <header>
     <h1>MENU</h1>
