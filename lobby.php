@@ -30,8 +30,6 @@ $nome_usuario = $dados_usuario['nome'];
 
 $dados = $usuario->ler();
 
-
-
 ?>
 
 <!DOCTYPE html>

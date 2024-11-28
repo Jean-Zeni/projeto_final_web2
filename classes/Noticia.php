@@ -28,12 +28,13 @@ class Noticia
 
     public function ler()
     {
-        $query = "SELECT * FROM " . $this->table_name . " AS noti JOIN " . $this->table_usu . " AS usu ON usu.id = noti.fk_id_autor";
+        $query = "SELECT * FROM " . $this->table_name . " AS noti JOIN " . $this->table_usu . " AS usu ON usu.id = noti.fk_id_autor ORDER BY data_noticia desc";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
     }
+    
     public function lerPorId($pkIdNoticia)
     {
         $query = "SELECT * FROM " . $this->table_name . " WHERE pk_id_noticia = ?";

@@ -40,20 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="box">
     <h1>Login</h1>
 
-
     <form method="POST">
         <label for="email">Email:</label><br>
-        <input class="campoTexto" type="email" name="email" required>
+        <input class="campoTexto" type="email" name="email">
         <br><br>
         <label for="senha">Senha:</label><br>
-        <input class="campoTexto" type="password" name="senha" required>
+        <input class="campoTexto" type="password" name="senha">
         <br><br>
         <input id="btnLogin" type="submit" name="login" value="Login">
     </form>
-    <!-- <p>Não tem uma conta? <a href="./cadastrarUsuario.php">Registre-se aqui</a></p>
-    <div class="mensagem">
-        php if (isset($mensagem_erro)) echo '<p>' . $mensagem_erro . '</p>';
-    </div> -->
+    <button id="btnSair" onclick="location:href='index.php'">Voltar</button>
+    <!-- botao de cima nao funciona -->
+
 </div>
 
     

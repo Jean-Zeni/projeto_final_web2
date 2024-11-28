@@ -120,7 +120,7 @@
         font-weight: 400;
         font-style: normal;
         margin: 0;
-        background-color: rgb(219, 213, 130);
+        background-color: rgb(255, 254, 205);
 
         .box {
             font-size: 20px;
@@ -138,6 +138,20 @@
 
             #btnLogin:hover{
                 background-color: blue;
+                color: white;
+                transition: background-color 0.15s ease-in-out;
+                cursor: pointer;
+            }
+
+            #btnSair{
+                margin-top: 10px;
+                font-size: 20px;
+                border-radius: 50px;
+                border-width: 0.5px;
+            }
+
+            #btnSair:hover{
+                background-color: red;
                 color: white;
                 transition: background-color 0.15s ease-in-out;
                 cursor: pointer;

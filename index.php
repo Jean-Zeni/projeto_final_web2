@@ -9,6 +9,9 @@ $usuarioBanco = new Usuario($db);
 
 
 $dadosNoticia = $noticiasBanco->ler();
+
+
+
 $dadosUsuario = $usuarioBanco->ler();
 
 ?>
@@ -37,6 +40,12 @@ $dadosUsuario = $usuarioBanco->ler();
 
 <?php while ($row = $dadosNoticia->fetch(PDO::FETCH_ASSOC)) : ?>
 
+    <?php
+        $dataOriginal = $row['data_noticia'];
+        
+        $dataFormatada = DateTime::createFromFormat('Y-m-d H:i:s', $dataOriginal);
+    ?>
+
     <!-- AQUI FICARÃO OS CARDS DE NOTÍCIAS -->
         <div id="cardNoticia">
             <!-- IMG NOTICIA -->
@@ -47,7 +56,7 @@ $dadosUsuario = $usuarioBanco->ler();
 
             echo $row['noticia'] . "<br><br>";
 
-            echo "Autor: <strong>" . $row['nome'] . "</strong>"?></p>
+            echo "Autor: <strong>" . $row['nome'] . "</strong><br><br>Data de Publicação: " . $dataFormatada->format('d/m/Y H:i:s'); ?></p>
         </div>
 
         <?php endwhile; ?>
