@@ -13,20 +13,25 @@
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Badges](#badges)
 - [Tecnologias](#tecnologias)
-- [...](#...)
-- [...](#...)
-- [...](#...)
+- [IDEs Utilizadas](#ides)
+- [Instruções de Configuração e Execução do Projeto](#instrucoes)
+- [Funcionalidades Adicionadas](#func)
+- [Como Contribuir](#contribuicoes)
+- [Tabelas](#tabelas)
 ---
 
+<a name="descricao-do-projeto"></a>
 ## Descrição Detalhada do Projeto
 Este projeto é um trabalho para a conclusão da disciplina de Desenvolvimento Web 2 para meu curso técnico em Tecnologia da Informação que faço pelo Colégio ULBRA São Lucas. Ele se trata de um portal de notícias fictício no qual usuários cadastrados no banco de dados podem inserir suas notícias a qualquer momento.
 
 ---
 
+<a name="badges"></a>
 <!-- Link para pagina da badges -->
 [Link Badges](https://ileriayo.github.io/markdown-badges/)
 ---
 
+<a name="tecnologias"></a>
 ## Tecnologias Utilizadas
 <!-- Badge PHP -->
 - ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
@@ -41,10 +46,12 @@ Este projeto é um trabalho para a conclusão da disciplina de Desenvolvimento W
 - **...** 
 ---
 
+<a name="ides"></a>
 ## IDEs/Editores utilizados
 <!-- Badge Visual Studio Code -->
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+<a name="instrucoes"></a>
 ## Instruções de Configuração e Execução
 Para configurar e executar o projeto localmente, siga os passos abaixo:
 
@@ -59,6 +66,7 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 ---
 3. Será necessário ter o Xampp instalado em sua máquina e, tendo este instalado, subir o servidor Apache e o banco de dados MySQL ( use o arquivo SQL que está disponível em meu Git Hub ( ; ).
 
+<a name="func"></a>
 ## Funcionalidades Implementadas
 - **Formulários PHP**
 - **Horário em Tempo Real**
@@ -66,6 +74,7 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 
 ---
 
+<a name="contribuicoes"></a>
 ## Como Contribuir para o Projeto
 Se você deseja contribuir para este projeto, siga os passos abaixo:
 
@@ -87,6 +96,7 @@ Se você deseja contribuir para este projeto, siga os passos abaixo:
 Agradecemos por contribuir para este projeto!
 ---
 
+<a name="tabelas"></a>
 ## Tabelas
 
 
