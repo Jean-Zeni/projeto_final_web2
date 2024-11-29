@@ -12,7 +12,7 @@
 ## Índice
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Badges](#badges)
-- [...](#...)
+- [Tecnologias](#tecnologias)
 - [...](#...)
 - [...](#...)
 - [...](#...)
