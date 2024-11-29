@@ -52,13 +52,15 @@ function saudacao()
 
 <head>
     <meta charset="UTF-8">
-    <title>Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Notícias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="gerNoti">
     <h1><?php echo saudacao() . ", " . $nome_usuario; ?>!</h1>
     <!-- <a href="registrar.php">Adicionar Usuário</a> -->
-    <a href="logout.php">Logout</a>
+    
     <br>
     <table border="1">
         <tr>
@@ -84,6 +86,8 @@ function saudacao()
             </tr>
         <?php endwhile; ?>
     </table>
+
+    <button id="btnSair" onclick="location.href='lobby.php'">Sair</button>
 </body>
 
 </html> 

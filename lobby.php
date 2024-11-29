@@ -53,7 +53,8 @@ $dados = $usuario->ler();
     <button onclick="location.href='cadastrarUsuario.php'"> Cadastrar Novo Usuario </button>
     <button onclick="location.href='gerenciarNoticias.php'"> Gerenciar Noticias </button>
     <button onclick="location.href='portalUsuarios.php'"> Gerenciar Usuarios </button>
-    <button onclick="location.href='index.php'"> Voltar </button>
+    <button onclick="location.href='login.php'"> Voltar </button>
+    <a id="btnLogout" href="logout.php">Fazer logout</a>
     
 </main>
 

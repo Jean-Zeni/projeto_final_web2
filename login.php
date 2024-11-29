@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <br><br>
         <input id="btnLogin" type="submit" name="login" value="Login">
     </form>
-    <button id="btnSair" onclick="location:href='index.php'">Voltar</button>
+    <button id="btnSair" onclick="location.href='index.php'">Voltar</button>
     <!-- botao de cima nao funciona -->
 
 </div>

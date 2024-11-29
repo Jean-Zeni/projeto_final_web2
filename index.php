@@ -65,10 +65,17 @@ $dadosUsuario = $usuarioBanco->ler();
     </main>
 
 
-    <footer>
+    <footer id="rodape">
 
         <!-- PARA COLOCAR AS IMAGENS DO RODAPÉ -->
-        <a href=""><img src="" alt=""></a>
+
+        <h4>Siga-nos em nossas redes sociais</h4>
+
+        <a href="https://github.com/Jean-Zeni"><img src="./imgsProjeto/github48px.png" alt=""></a>
+
+        <a href=""><img src="./imgsProjeto/fb48px.png" alt=""></a>
+
+        <a href=""><img src="./imgsProjeto/insta48px.png" alt=""></a>
 
     </footer>
 

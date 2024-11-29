@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Validar tipo de arquivo
         $tiposPermitidos = ['jpg', 'jpeg', 'png'];
         if (!in_array($extensao, $tiposPermitidos)) {
-            die("Apenas arquivos JPG ou PNG são permitidos.");
+            die("Apenas arquivos JPG, JPEG ou PNG são permitidos.");
         }
 
         // Validar tamanho do arquivo
@@ -74,22 +74,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <title>Adicionar Nova Notícia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Notícia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="telaCadNoti">
 
     <div class="container">
         <h1>Publicar Nova Notícia</h1>
         <form method="POST" action="cadastrarNoticias.php" enctype="multipart/form-data">
 
-            <label for="tituloNoticia">Título:</label>
+            <label for="tituloNoticia">Título:</label><br>
             <input type="text" name="tituloNoticia" id="tituloNoticia" required>
-            <br>
+            <br><br>
 
-            <textArea name="noticia" rows="5" cols="15" required></textArea><br>
-            <input type="file" name="foto" accept=".jpg, .png, .jpeg"><br>
-            <input type="submit" value="Publicar">
+            <label for="noticia">Notícia:</label><br>
+            <textArea id="noti" name="noticia" rows="5" cols="15" required></textArea><br><br>
+
+            <input id="escolherImg" type="file" name="foto" accept=".jpg, .png, .jpeg"><br>
+
+            <input id="publicar" type="submit" value="Publicar">
+
+            <button id="btnSair" onclick="location.href='lobby.php'">Voltar</button>
 
         </form>
 
